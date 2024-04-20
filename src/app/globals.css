@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    background-color: beige;
+}
+
 .primary_gradient {
     background: rgb(0, 66, 131);
     background: linear-gradient(0deg, rgba(0, 66, 131, 1) 0%, rgba(0, 128, 255, 1) 100%);

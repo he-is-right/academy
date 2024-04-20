@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    background-color: beige;
-}
 
 .primary_gradient {
     background: rgb(0, 66, 131);

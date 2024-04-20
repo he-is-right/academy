@@ -29,7 +29,7 @@ export default function HomePage() {
             </div>
         </section>
         {/* Why Owlcade Academy section */}
-        <section className="_secondary py-[4rem]">
+        <section className="_secondary py-[4rem] bg-[whitesmoke]">
             <h1 className="text-center text-xl md:text-2xl font-bold">Why Choose Owlcade ICT Academy?</h1>
             <div className="flex flex-col md:flex-row justify-between my-[2rem] md:my-[4rem] w-[95%] md:w-[80%] mx-auto gap-4">
                 <div className="border border-[#0080ff] shadow-xl hover:shadow-2xl flex flex-col items-center justify-center w-[90%] mx-auto md:mx-0 md:w-[22%] p-4 rounded text-center">
@@ -78,7 +78,7 @@ export default function HomePage() {
             </div>
         </section>
         {/* Team and Individual register section */}
-        <section className="_secondary py-[4rem] md:py-[8rem] text-white">
+        <section className="_secondary py-[4rem] md:py-[8rem] text-white bg-[whitesmoke]">
             <h1 className="text-center font-bold text-xl md:text-2xl">The best Institute for All.</h1>
             <div className="w-[90%] md:w-[80%] mx-auto my-8">
                 <div className="flex flex-col-reverse md:flex-row justify-between mb-[4rem]">

@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.primary_gradient {
+    background: rgb(0, 66, 131);
+    background: linear-gradient(0deg, rgba(0, 66, 131, 1) 0%, rgba(0, 128, 255, 1) 100%);
+}
+
+._primary {
+    color: #0080ff;
+    /* background-color: #696969; */
+}
+
+._secondary {
+    color: #01303F;
+}
+
+._shadow {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+._hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.473), rgba(0, 0, 0, 0.473)), url(../../public/students4.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+._filter {
+    filter: grayscale(60%);
+}

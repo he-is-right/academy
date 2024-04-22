@@ -65,19 +65,19 @@ export default function HomePage() {
                 <div className="w-[95%] md:w-[45%] mx-auto">
                     <h1 className="font-bold text-xl md:text-2xl mt-8 md:mt-0">Available Courses</h1>
                     <ul className="flex flex-wrap gap-4 w-[100%] mt-8 border rounded px-2 py-3">
-                        <li className="">Web Development</li>
-                        <li className="">Product Design</li>
-                        <li className="">Phone Repair</li>
-                        <li className="">Data Analytics</li>
-                        <li className="">Data Science</li>
-                        <li className="">Artificial Intelligence</li>
-                        <li className="">PC Maintainance</li>
-                        <li className="">Social Media Management</li>
-                        <li className="">Cyber Security</li>
-                        <li className="">Graphic Design</li>
-                        <li className="">cloud Engineering</li>
-                        <li className="">Mobile Development</li>
-                        <li className="">Game Development</li>
+                        <li className="text-sm md:text-base">Web Development</li>
+                        <li className="text-sm md:text-base">Product Design</li>
+                        <li className="text-sm md:text-base">Phone Repair</li>
+                        <li className="text-sm md:text-base">Data Analytics</li>
+                        <li className="text-sm md:text-base">Data Science</li>
+                        <li className="text-sm md:text-base">Artificial Intelligence</li>
+                        <li className="text-sm md:text-base">PC Maintainance</li>
+                        <li className="text-sm md:text-base">Social Media Management</li>
+                        <li className="text-sm md:text-base">Cyber Security</li>
+                        <li className="text-sm md:text-base">Graphic Design</li>
+                        <li className="text-sm md:text-base">cloud Engineering</li>
+                        <li className="text-sm md:text-base">Mobile Development</li>
+                        <li className="text-sm md:text-base">Game Development</li>
                     </ul>
                 </div>
             </div>

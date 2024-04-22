@@ -1,7 +1,7 @@
 export default function StudentRegister() {
     return <>
         <div className="bg-[#f0f7ff] py-[2rem] md:py-[3rem]">
-            <form className="pb-[2rem] w-[95%] md:w-[50%] mx-auto bg-[white] shadow flex flex-col rounded-lg mt-[4rem]" action="">
+            <form className="pb-[2rem] w-[95%] md:w-[50%] mx-auto bg-[white] shadow flex flex-col rounded-lg md:mt-[4rem]" action="">
                 <h1 className="font-bold text-xl mb-2 text-[#01303F] text-center bg-[#f5f5f5] py-4">Register Now!</h1>
                 <div className="flex flex-col md:flex-row gap-4 w-[100%] px-4">
                     <label className="form-control w-[100%] md:w-[95%]">

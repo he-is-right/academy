@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
     return <>
         {/* Hero section */}
-        <section className="_secondary bg-[#f0f7ff] py-[4rem] md:py-[8rem]">
+        <section className="_secondary bg-[#f0f7ff] py-[1.5rem] md:py-[8rem]">
             <div className="flex flex-col-reverse md:flex-row justify-between w-[95%] mx-auto gap-8 md:gap-0">
                 <div className="w-[100%] md:w-[45%] flex flex-col gap-4 md:gap-8">
                     <h1 className="text-4xl md:text-8xl font-bold">Start a career in Tech today!</h1>

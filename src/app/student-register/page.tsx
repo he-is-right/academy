@@ -8,13 +8,13 @@ export default function StudentRegister() {
                         <div className="label">
                             <span className="label-text text-[#01303F]">First Name</span>
                         </div>
-                        <input type="text" placeholder="Enter your first name" className="input input-bordered border-[#01303F] w-full bg-[transparent] text-[#01303F]" />
+                        <input required type="text" placeholder="Enter your first name" className="input input-bordered border-[#01303F] w-full bg-[transparent] text-[#01303F]" />
                     </label>
                     <label className="form-control w-[100%] md:w-[95%]">
                         <div className="label">
                             <span className="label-text text-[#01303F]">Last Name</span>
                         </div>
-                        <input type="text" placeholder="Enter your last name" className="input input-bordered border-[#01303F] w-full bg-[transparent] text-[#01303F]" />
+                        <input required type="text" placeholder="Enter your last name" className="input input-bordered border-[#01303F] w-full bg-[transparent] text-[#01303F]" />
                     </label>
                 </div>
                 {/* email and phone number */}
@@ -23,13 +23,13 @@ export default function StudentRegister() {
                         <div className="label">
                             <span className="label-text text-[#01303F]">Email</span>
                         </div>
-                        <input type="text" placeholder="Enter a valid email address" className="input input-bordered border-[#01303F] w-full bg-[transparent] text-[#01303F]" />
+                        <input required type="email" placeholder="Enter a valid email address" className="input input-bordered border-[#01303F] w-full bg-[transparent] text-[#01303F]" />
                     </label>
                     <label className="form-control w-[100%] md:w-[95%] ">
                         <div className="label">
                             <span className="label-text text-[#01303F]">Phone Number</span>
                         </div>
-                        <input type="text" placeholder="Enter Phone Number" className="input input-bordered border-[#01303F] w-full bg-[transparent] text-[#01303F]" />
+                        <input required type="phone" placeholder="Enter Phone Number" className="input input-bordered border-[#01303F] w-full bg-[transparent] text-[#01303F]" />
                     </label>
                 </div>
                 {/* gender, course and age */}
@@ -38,7 +38,7 @@ export default function StudentRegister() {
                         <div className="label">
                             <span className="label-text text-[#01303F]">Gender</span>
                         </div>
-                        <select className="select select-bordered border-[#01303F] w-full bg-[transparent] text-[#01303F]">
+                        <select required className="select select-bordered border-[#01303F] w-full bg-[transparent] text-[#01303F]">
                             <option disabled selected>Select Gender</option>
                             <option>Male</option>
                             <option>Female</option>
@@ -48,7 +48,7 @@ export default function StudentRegister() {
                         <div className="label">
                             <span className="label-text text-[#01303F]">Course</span>
                         </div>
-                        <select className="select select-bordered border-[#01303F] w-full bg-[transparent] text-[#01303F]">
+                        <select required className="select select-bordered border-[#01303F] w-full bg-[transparent] text-[#01303F]">
                             <option disabled selected>Select Course</option>
                             <option>Web Development</option>
                             <option>Product Design</option>
@@ -61,7 +61,7 @@ export default function StudentRegister() {
                         <div className="label">
                             <span className="label-text text-[#01303F]">Age</span>
                         </div>
-                        <select className="select select-bordered border-[#01303F] w-full bg-[transparent] text-[#01303F]">
+                        <select required className="select select-bordered border-[#01303F] w-full bg-[transparent] text-[#01303F]">
                             <option disabled selected>Select Age</option>
                             <option>13 - 17</option>
                             <option>18 - 25</option>

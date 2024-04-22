@@ -27,7 +27,7 @@ export default function Navbar() {
         }
     }, [])
     return <>
-        <header className={header ? "md:fixed w-[100%] bg-[white] shadow z-40" : "bg-[white] shadow"}>
+        <header className={header ? "md:fixed w-[100%] bg-[white] shadow z-40" : "bg-[white] shadow md:fixed"}>
             <div className="flex w-[95%] justify-between items-center mx-auto py-5">
                 <div className="w-[35%] md:w-[12%]">
                     <Link href="/">

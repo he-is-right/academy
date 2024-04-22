@@ -12,7 +12,7 @@ export default function Footer() {
                 </div>
                 <div className="w-[30%] md:w-[10%]">
                     <Link href="/">
-                        <Image src={logo} alt="Logo" />
+                        <Image className="_filter" src={logo} alt="Logo" />
                     </Link>
                 </div>
             </div>

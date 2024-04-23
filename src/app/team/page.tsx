@@ -53,7 +53,7 @@ export default function Team() {
                         <span className="label-text text-[#01303F]">Gender</span>
                     </div>
                     <select required className="select select-bordered border-[#01303F] w-full bg-[transparent] text-[#01303F]">
-                        <option disabled selected>Select Gender</option>
+                        <option disabled selected>Select your Gender</option>
                         <option>Male</option>
                         <option>Female</option>
                     </select>
@@ -64,7 +64,7 @@ export default function Team() {
                         <span className="label-text text-[#01303F]">Age</span>
                     </div>
                     <select required className="select select-bordered border-[#01303F] w-full bg-[transparent] text-[#01303F]">
-                        <option disabled selected>Select Age</option>
+                        <option disabled selected>Select your Age</option>
                         <option>13 - 17</option>
                         <option>18 - 25</option>
                         <option>26 - 30</option>

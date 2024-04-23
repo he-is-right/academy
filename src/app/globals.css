@@ -32,20 +32,3 @@
 ._filter {
     filter: grayscale(60%);
 }
-
-._nav-big {
-    position: absolute;
-    right: -100rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    top: 4rem;
-    background-color: white;
-    z-index: 1;
-    transition: all 3s;
-}
-
-._nav-sm {
-    right: 3rem;
-}

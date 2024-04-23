@@ -70,7 +70,13 @@ export default function StudentRegister() {
                         </select>
                     </label>
                 </div>
-                <button className="bg-[#01303F] py-4 mt-8 md:mt-7 w-[90%] md:w-[95%] mx-auto rounded btn text-white">Submit</button>
+                <div className="form-control w-[95%] mx-auto mt-4">
+                    <label className="label cursor-pointer w-[50%] md:w-[24%]">
+                        <input type="checkbox" defaultChecked className="checkbox border-[#01303F]" />
+                        <span className="label-text text-[#01303F]">Join Community</span>
+                    </label>
+                </div>
+                <button className="bg-[#01303F] border border-2 border-[#01303F] py-4 mt-8 md:mt-7 w-[90%] md:w-[95%] mx-auto rounded btn text-white">Submit</button>
             </form>
         </div>
     </>

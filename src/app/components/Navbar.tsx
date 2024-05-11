@@ -4,7 +4,6 @@ import Image from "next/image"
 import logo from "../../../public/logo.png"
 
 import React, { useEffect, useState } from "react"
-
 export default function Navbar() {
     // Scroll function for sticky navbar
     const [header, setHeader] = useState(false)
@@ -28,6 +27,7 @@ export default function Navbar() {
     }, [])
     const linkedInUrl = 'https://www.linkedin.com/company/owlcade/'
     const emergeUrl = 'https://www.linkedin.com/company/the-techport-academy/'
+    const studentLink = "https://docs.google.com/forms/d/e/1FAIpQLSdd1pN4QbYTXyB29yewTP60_OJuNsnTZM3BfAfXy2ePK1eSlQ/viewform"
     return <>
         <header className={header ? "md:fixed w-[100%] bg-[white] shadow z-40" : "bg-[white] shadow md:fixed"}>
             <div className="flex w-[95%] justify-between items-center mx-auto py-5">
@@ -44,7 +44,7 @@ export default function Navbar() {
                     <li><Link className="text-[#01303F] hover:text-[#01516c]" href={linkedInUrl} target="_blank">About</Link></li>
                     {/* <li><a className="text-[#01303F] hover:text-[#01516c]" href="https://www.linkedin.com/company/owlcade/" target="_blank">Linkedin</a></li> */}
                     <li><Link className="text-[#01303F] hover:text-[#01516c]" href={emergeUrl} target="_blank">Emerge</Link></li>
-                    <li><Link className="bg-[#01303F] hover:bg-[#01516c] text-white text-center py-2 px-4 rounded font-bold" href="/student-register">Register Now</Link></li>
+                    <li><Link className="bg-[#01303F] hover:bg-[#01516c] text-white text-center py-2 px-4 rounded font-bold" href={studentLink} target="_blank">Register Now</Link></li>
                 </ul>
                 <nav className="hidden md:block">
                     <ul className="flex gap-[2.5rem]">

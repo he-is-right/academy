@@ -5,11 +5,12 @@ import individual from "../../public/individual.jpg"
 import team from "../../public/team.jpg"
 import students from "../../public/students.jpeg"
 import students3 from "../../public/students3.jpeg"
+import { Url } from "url"
 
 export const metadata: Metadata = {
     title: "Owlcade ICT Academy"
 }
-const studentRegister = "https://docs.google.com/forms/d/e/1FAIpQLSdd1pN4QbYTXyB29yewTP60_OJuNsnTZM3BfAfXy2ePK1eSlQ/viewform"
+const studentLink = "https://docs.google.com/forms/d/e/1FAIpQLSdd1pN4QbYTXyB29yewTP60_OJuNsnTZM3BfAfXy2ePK1eSlQ/viewform"
 
 export default function HomePage() {
     return <>
@@ -20,7 +21,7 @@ export default function HomePage() {
                     <h1 className="text-4xl md:text-8xl font-bold">Start a career in Tech today!</h1>
                     <p>Embark on a transformative journey tailored to cultivate expertise for proficient tech professionals, navigating through a dynamic curriculum that emphasizes hands-on, project-based learning experiences.</p>
                     <div>
-                        <Link className="bg-[#0080ff] hover:bg-[#0080ff] text-white text-center py-2 px-4 rounded font-bold" href={studentRegister}>Enroll Now</Link>
+                        <Link className="bg-[#0080ff] hover:bg-[#0080ff] text-white text-center py-2 px-4 rounded font-bold" href={studentLink} target="_blank">Enroll Now</Link>
                     </div>
                 </div>
                 <div className="w-[100%] md:w-[45%]">
@@ -92,7 +93,7 @@ export default function HomePage() {
                         <h1 className=" font-bold mt-2 md:mt-0">For Individuals</h1>
                         <p>At Owlcade ICT Academy, you'll receive exceptional training with individualized mentorship, enriching your expertise and unlocking life-altering opportunities.</p>
                         <div>
-                            <Link href="/student-register" className="border border-2 border-[#0080ff] hover:bg-[#0080ff] hover:text-white text-center py-2 px-4 rounded font-bold">Get Started</Link>
+                            <Link href={studentLink} target="_blank" className="border border-2 border-[#0080ff] hover:bg-[#0080ff] hover:text-white text-center py-2 px-4 rounded font-bold">Get Started</Link>
                         </div>
                     </div>
                     <div className="w-[100%] md:w-[50%]">
@@ -124,7 +125,7 @@ export default function HomePage() {
                     <h1 className="font-bold">Become a Student Today</h1>
                     <p>Focused on creating awareness, impacting Knowledge and offering life changing opportunities</p>
                     <div className="mt-3">
-                        <Link href="/student-register" className="border border-2 border-[#0080ff] hover:bg-[#0080ff] hover:text-white text-center py-2 px-4 rounded font-bold">Start Now</Link>
+                        <Link href={studentLink} target="_blank" className="border border-2 border-[#0080ff] hover:bg-[#0080ff] hover:text-white text-center py-2 px-4 rounded font-bold">Start Now</Link>
                     </div>
                 </div>
             </div>

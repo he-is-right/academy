@@ -1,0 +1,50 @@
+// schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["jsonProtocol"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+model Team {
+  id                String     @default(cuid()) @id
+  name              String
+  fullName          String
+  role              String
+  email             String    @unique
+  phone             String
+  gender            String
+  age               String
+  numberOfStudents  String
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
+  @@map(name: "team")
+}
+
+model Student {
+  id            String       @default(cuid()) @id
+  firstName     String
+  lastName      String
+  phone_number  String
+  course        String
+  age           String
+  gender        String
+  email         String   @unique
+  join          Boolean
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
+  @@map(name: "students")
+}
+
+model NewsLetter {
+  id            String       @default(cuid()) @id
+  email         String   @unique
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
+  @@map(name: "newsLetter")
+}

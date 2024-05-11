@@ -1,0 +1,63 @@
+// schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["jsonProtocol"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model Post {
+  id        String     @default(cuid()) @id
+  title     String
+  content   String?
+  published Boolean @default(false)
+  author    User?   @relation(fields: [authorId], references: [id])
+  authorId  String?
+}
+
+model User {
+  id            String       @default(cuid()) @id
+  name          String?
+  email         String?   @unique
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
+  posts         Post[]
+  @@map(name: "users")
+}// schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model Team {
+  id                  String     @default(cuid()) @id
+  title               String
+  firstName          String?
+  lastName           String?
+  numberOfStudents   String?
+}
+
+model Student {
+  id            String       @default(cuid()) @id
+  firstName    String?
+  lastName     String?
+  phone_number  String?
+  course        String?
+  age           String?
+  gender        String?
+  email         String?   @unique
+  createdAt     DateTime  @default(now()) @map(firstName: "created_at")
+  updatedAt     DateTime  @updatedAt @map(firstName: "updated_at")
+  @@map(firstName: "Students")
+}

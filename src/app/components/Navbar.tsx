@@ -26,6 +26,8 @@ export default function Navbar() {
 
         }
     }, [])
+    const linkedInUrl = 'https://www.linkedin.com/company/owlcade/'
+    const emergeUrl = 'https://www.linkedin.com/company/the-techport-academy/'
     return <>
         <header className={header ? "md:fixed w-[100%] bg-[white] shadow z-40" : "bg-[white] shadow md:fixed"}>
             <div className="flex w-[95%] justify-between items-center mx-auto py-5">
@@ -39,15 +41,16 @@ export default function Navbar() {
                 </div>
                 <ul className={!isActive ? 'absolute top-[-100%] md:hidden' : 'absolute flex flex-col top-[4rem] gap-[2.5rem] bg-white w-full z-40 left-0 py-8 px-2 md:hidden'}>
                     <li><Link className="text-[#01303F] hover:text-[#01516c]" href="/">Home</Link></li>
-                    <li><Link className="text-[#01303F] hover:text-[#01516c]" href="/about">About</Link></li>
-                    <li><Link className="text-[#01303F] hover:text-[#01516c]" href="/emerge">Emerge</Link></li>
+                    <li><Link className="text-[#01303F] hover:text-[#01516c]" href={linkedInUrl} target="_blank">About</Link></li>
+                    {/* <li><a className="text-[#01303F] hover:text-[#01516c]" href="https://www.linkedin.com/company/owlcade/" target="_blank">Linkedin</a></li> */}
+                    <li><Link className="text-[#01303F] hover:text-[#01516c]" href={emergeUrl} target="_blank">Emerge</Link></li>
                     <li><Link className="bg-[#01303F] hover:bg-[#01516c] text-white text-center py-2 px-4 rounded font-bold" href="/student-register">Register Now</Link></li>
                 </ul>
                 <nav className="hidden md:block">
                     <ul className="flex gap-[2.5rem]">
                         <li><Link className="text-[#01303F] hover:text-[#01516c]" href="/">Home</Link></li>
-                        <li><Link className="text-[#01303F] hover:text-[#01516c]" href="/about">About</Link></li>
-                        <li><Link className="text-[#01303F] hover:text-[#01516c]" href="/emerge">Emerge</Link></li>
+                        <li><Link className="text-[#01303F] hover:text-[#01516c]" href={linkedInUrl} target="_blank">About</Link></li>
+                        <li><Link className="text-[#01303F] hover:text-[#01516c]" href={emergeUrl} target="_blank">Emerge</Link></li>
                         <li><Link className="bg-[#01303F] hover:bg-[#01516c] text-white text-center py-2 px-4 rounded font-bold" href="/student-register">Register Now</Link></li>
                     </ul>
                 </nav>

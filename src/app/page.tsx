@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     title: "Owlcade ICT Academy"
 }
 const studentLink = "https://docs.google.com/forms/d/e/1FAIpQLSdd1pN4QbYTXyB29yewTP60_OJuNsnTZM3BfAfXy2ePK1eSlQ/viewform"
+const teamLink = "https://docs.google.com/forms/d/e/1FAIpQLSc4C_7ZTzIS6bcZNDmMgNhpjGh8hAdprMYvObmDgf7Y9X1N2Q/viewform"
 
 export default function HomePage() {
     return <>
@@ -104,9 +105,9 @@ export default function HomePage() {
                 <div className="flex flex-col-reverse md:flex-row justify-between">
                     <div className="w-[100%] md:w-[40%] flex flex-col gap-5">
                         <h1 className="font-bold mt-2 md:mt-0">For Team</h1>
-                        <p>Owlcade ICT Academy offers teams the best training skills, including deep-dive mentoring, knowledge expansion, and life-changing opportunities.</p>
+                        <p>Owlcade ICT Academy offers teams the best training skills, whether its for schools, companies or organisations.This also includes deep-dive mentoring, knowledge expansion, and life-changing opportunities.</p>
                         <div>
-                            <Link href="/team" className="border border-2 border-[#0080ff] hover:bg-[#0080ff] hover:text-white text-center py-2 px-4 rounded font-bold">Get Started</Link>
+                            <Link href={teamLink} target="_blank" className="border border-2 border-[#0080ff] hover:bg-[#0080ff] hover:text-white text-center py-2 px-4 rounded font-bold">Get Started</Link>
                         </div>
                     </div>
                     <div className="w-[100%] md:w-[50%]">

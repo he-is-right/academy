@@ -51,7 +51,7 @@ export default function Navbar() {
                         <li><Link className="text-[#01303F] hover:text-[#01516c]" href="/">Home</Link></li>
                         <li><Link className="text-[#01303F] hover:text-[#01516c]" href={linkedInUrl} target="_blank">About</Link></li>
                         <li><Link className="text-[#01303F] hover:text-[#01516c]" href={emergeUrl} target="_blank">Emerge</Link></li>
-                        <li><Link className="bg-[#01303F] hover:bg-[#01516c] text-white text-center py-2 px-4 rounded font-bold" href="/student-register">Register Now</Link></li>
+                        <li><Link className="bg-[#01303F] hover:bg-[#01516c] text-white text-center py-2 px-4 rounded font-bold" href={studentLink} target="_blank">Register Now</Link></li>
                     </ul>
                 </nav>
             </div>

@@ -12,59 +12,29 @@ export default function StudentRegister() {
     const [age, setAge] = useState('');
     const [join, setJoin] = useState(false);
 
-    // writing functions for the input tags
-    const handleFirstName = (event) => {
-        setFirstName(event.target.value);
-    }
-    const handleLastName = (event) => {
-        setLastName(event.target.value);
-    }
-    const handleEmail = (event) => {
-        setEmail(event.target.value);
-    }
-    const handlePhone = (event) => {
-        // const phoneNumber = parsePhoneNumber();
-        setPhone(event.target.value);
-    }
-    const handleGender = (event) => {
-        setGender(event.target.value);
-    }
-    const handleCourse = (event) => {
-        setCourse(event.target.value);
-    }
-    const handleAge = (event) => {
-        setAge(event.target.value);
-    }
-    const handleJoin = () => {
-        setJoin(!join);
-    }
-
     // submit function handler
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-
-        try {
-            await fetch('/api/create-student', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ firstName, lastName, email, phone, gender, course, age, join })
-            })
-            const data = await response.json();
-            console.log(data.message);
-        } catch (error) {
-            console.error('Error submitting form:', error);
+    const handleSubmit = async (e: React.FormEvent): Promise<void>  => {
+        e.preventDefault();
+        if (!firstName || !lastName || !email || !phone || !gender || !course || !age || !join ){
+            setFormError('Please fill in all the field correctly')
+            return
         }
-        // Clear form fields
-        setFirstName('');
-        setLastName('');
-        setEmail('');
-        setPhone('');
-        setGender('');
-        setCourse('');
-        setAge('');
-        // setJoin(false);
+         const {data, error} = await supabase
+            .from("student")
+            .insert([{first_name: firstName, last_name: lastName, phone_number: phone, email: email, gender, course, age, join}])
+            .select()
+
+        if (error) {
+            console.log(error)
+            setFormError('Network Error! Try again...')
+        }
+
+        if (data) {
+            console.log(data)
+            setFormError(null)
+        }
+        }
+        
     }
 
     return (
@@ -77,7 +47,7 @@ export default function StudentRegister() {
                             <div className="label">
                                 <span className="label-text text-[#01303F]">First Name</span>
                             </div>
-                            <input value={firstName} onChange={handleFirstName} required type="text" placeholder="Enter your first name" className="input input-bordered border-[#01303F] w-full bg-[transparent] text-[#01303F]" />
+                            <input value={firstName} onChange={(e) => setFirstName(e.target.value)} required type="text" placeholder="Enter your first name" className="input input-bordered border-[#01303F] w-full bg-[transparent] text-[#01303F]" />
                         </label>
                         <label className="form-control w-[100%] md:w-[95%]">
                             <div className="label">
